@@ -7,7 +7,7 @@ export default function HeroComponent({ imgUrl, content, description }) {
     <Box
       sx={{
         width: "100%",
-        height: { xs: "60vh", md: "80vh" },
+        height: { xs: "60vh", md: "91vh" },
         backgroundImage: `url("${imgUrl}")`,
         backgroundSize: "cover",
         backgroundPosition: "center",

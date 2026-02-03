@@ -1,6 +1,7 @@
 import React from "react";
 import HeroComponent from "../componentens/HeroComponent";
 import HeroPic from "../img/HeroPic.png";
+import NewArrivalComponent from "../componentens/NewArrivalComponent";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
         content="Where Every Box Holds Value"
         description="Unlock rare collectibles and limited-edition blind boxes."
       />
+      <NewArrivalComponent />
     </>
   );
 }
