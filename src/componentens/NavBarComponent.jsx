@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import LogoTextComponent from "./LogoTextComponent";
+import { Link } from "react-router";
 
 export default function NavBarComponent() {
   return (
@@ -45,19 +46,21 @@ export default function NavBarComponent() {
             }}
           />
 
-          <Button
-            sx={{
-              color: "#000000ff",
-              border: "1px solid #000000ff",
-              borderRadius: "999px",
-              px: 3,
-              "&:hover": {
-                backgroundColor: "rgba(201, 162, 77, 0.1)",
-              },
-            }}
-          >
-            Login
-          </Button>
+          <Link to="/login">
+            <Button
+              sx={{
+                color: "#000000ff",
+                border: "1px solid #000000ff",
+                borderRadius: "999px",
+                px: 3,
+                "&:hover": {
+                  backgroundColor: "rgba(201, 162, 77, 0.1)",
+                },
+              }}
+            >
+              Login
+            </Button>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>

@@ -17,7 +17,7 @@ export default function CardComponent({ newItemData }) {
           {/* MUI Link + React Router */}
           <MuiLink
             component={RouterLink}
-            to={`/product/${item.id}`}
+            to={`/product/detail/${item.id}`}
             underline="none"
             color="inherit"
             sx={{ display: "block" }}

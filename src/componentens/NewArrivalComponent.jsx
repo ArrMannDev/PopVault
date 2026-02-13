@@ -8,19 +8,26 @@ export default function NewArrivalComponent() {
   const [newItemData, setNewItemData] = useState([]);
 
   const getNewItemsData = async () => {
-    try {
-      const response = await axios.get(
-        "http://localhost:5300/blind-box-packages",
-      );
+    await axios
+      .get("http://localhost:5300/blind-box-packages")
+      .then((response) => {
+        console.log("Status Code:", response.status);
+        console.log("Response Data:", response.data);
 
-      const newArrivalData = response.data.filter(
-        (item) => item.productType === "New Arrival",
-      );
+        const newArrivalData = response.data.filter(
+          (item) => item.productType === "New Arrival",
+        );
 
-      setNewItemData(newArrivalData);
-    } catch (error) {
-      console.error("Error fetching new arrivals:", error);
-    }
+        setNewItemData(newArrivalData);
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log("Status Code:", error.response.status);
+          console.log("Error Data:", error.response.data);
+        } else {
+          console.log("Error:", error.message);
+        }
+      });
   };
 
   useEffect(() => {
