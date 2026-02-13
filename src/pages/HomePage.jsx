@@ -1,7 +1,7 @@
 import React from "react";
-import HeroComponent from "../componentens/HeroComponent";
+import HeroComponent from "../components/HeroComponent";
 import HeroPic from "../img/HeroPic.png";
-import NewArrivalComponent from "../componentens/NewArrivalComponent";
+import NewArrivalComponent from "../components/NewArrivalComponent";
 
 export default function HomePage() {
   return (

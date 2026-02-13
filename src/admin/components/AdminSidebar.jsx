@@ -15,7 +15,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PeopleIcon from "@mui/icons-material/People";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useNavigate, useLocation } from "react-router-dom";
-import LogoTextComponent from "../../componentens/LogoTextComponent";
+import LogoTextComponent from "../../components/LogoTextComponent";
 
 const drawerWidth = 260;
 

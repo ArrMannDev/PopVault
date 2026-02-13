@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import NavBarComponent from "../componentens/NavBarComponent";
-import FooterComponent from "../componentens/FooterComponent";
+import NavBarComponent from "../components/NavBarComponent";
+import FooterComponent from "../components/FooterComponent";
 
 export default function LayOutPage() {
   //   const pages = [

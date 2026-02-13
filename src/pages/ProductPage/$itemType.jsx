@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { Box } from "@mui/material";
-import CardComponent from "../../componentens/CardComponent";
+import CardComponent from "../../components/CardComponent";
 import axios from "axios";
 import { useEffect, useState } from "react";
 

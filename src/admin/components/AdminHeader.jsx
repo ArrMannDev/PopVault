@@ -15,7 +15,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function AdminHeader({
   handleDrawerToggle,
-  title = "Dashboard",
+  title = "Admin Panel",
+  userName,
 }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const navigate = useNavigate();
@@ -39,7 +40,10 @@ export default function AdminHeader({
       position="fixed"
       sx={{
         width: { md: `calc(100% - 260px)` },
+        height: "80px",
         ml: { md: `260px` },
+        display: "flex",
+        alignItems: "flex-end",
         backgroundColor: "rgba(141, 141, 143, 0.6)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
@@ -47,7 +51,7 @@ export default function AdminHeader({
         borderBottom: "1px solid rgba(201, 162, 77, 0.25)",
       }}
     >
-      <Toolbar>
+      <Toolbar sx={{ mt: 1 }}>
         {/* Mobile menu button */}
         <IconButton
           color="inherit"
@@ -59,14 +63,14 @@ export default function AdminHeader({
         </IconButton>
 
         {/* Page Title */}
-        <Typography
-          variant="h6"
+        {/* <Typography
+          variant="h5"
           noWrap
           component="div"
           sx={{ flexGrow: 1, color: "#000" }}
         >
           {title}
-        </Typography>
+        </Typography> */}
 
         {/* Notifications */}
         <IconButton color="inherit" sx={{ mr: 1 }}>
@@ -75,7 +79,9 @@ export default function AdminHeader({
 
         {/* User Menu */}
         <IconButton onClick={handleMenu} sx={{ p: 0 }}>
-          <Avatar sx={{ bgcolor: "#C9A24D" }}>A</Avatar>
+          <Avatar sx={{ bgcolor: "#C9A24D" }}>
+            {userName ? userName.charAt(0).toUpperCase() : ""}
+          </Avatar>
         </IconButton>
         <Menu
           anchorEl={anchorEl}
